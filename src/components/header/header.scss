@@ -1,0 +1,41 @@
+@import "../../styles/mixins.scss";
+
+.header {
+  padding: 0.25%;
+  margin: 0.25%;
+  border: 2px solid black;
+  border-radius: 8px;
+  justify-content: center;
+  display: flex;
+
+  .wrapper {
+    justify-content: space-between;
+    display: flex;
+    @include container;
+
+    .logo {
+      width: 50px;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: row;
+      box-sizing: border-box;
+
+      .profileText {
+        display: flex;
+        color: black;
+        align-items: center;
+        font-size: 1.1em;
+      }
+
+      .profileAvatarImg {
+        box-sizing: border-box;
+        height: 100%;
+        width: 50px;
+        border-radius: 100%;
+        margin-left: 1vw;
+      }
+    }
+  }
+}
