@@ -1,6 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-y: scroll; /* Всегда показывает вертикальную полосу прокрутки */
+}
+
 body {
   font-family: "Open Sans";
   margin: 0px;
   width: 100%;
   font-size: 20px;
+  background-color: var(--bg-color);
+}
+
+:root {
+  --firstColor: white;
+  --firstColorShadow: #ededed;
+  --secondColor: black;
+  --thirdColor: #ff9100;
+  --darkThemeBackgroundColor: #444444;
+  --darkThemeBackgroundColorShadow: #555;
+  --darkThemeSecondColor: white;
+  --bg-color: var(--firstColor);
+  --text-color: var(--secondColor);
+  --component-bg-color: var(--firstColor);
+}
+
+[data-theme="light"] {
+  --bg-color: var(--firstColor);
+  --bg-color-shadow: var(--firstColorShadow);
+  --text-color: var(--secondColor);
+  --component-bg-color: var(--firstColor);
+}
+
+[data-theme="dark"] {
+  --bg-color: var(--darkThemeBackgroundColor);
+  --bg-color-shadow: var(--darkThemeBackgroundColorShadow);
+  --text-color: var(--firstColor);
+  --component-bg-color: var(--darkThemeBackgroundColor);
+}
+
+* {
+  box-sizing: border-box !important;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: var(--bg-color);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(167, 167, 167);
+    background-clip: padding-box;
+    border: 2px solid var(--bg-color);
+    border-radius: 7px;
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    scrollbar-color: var(--bg-color) var(--text-color);
+    scrollbar-width: thin;
+  }
 }

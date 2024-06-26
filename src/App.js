@@ -1,18 +1,61 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Main from "./pages/main"
 import "./styles/global.scss"
-import AlbumsPage from "./pages/albumsPage/albumsPage"
+import Albums from "./components/albums/albums"
+import SignIn from "./pages/SignIn/SignIn"
+import Registration from "./pages/Registration/Registration"
+import Posts from "./components/posts/posts"
+import Photos from "./components/photos/photos"
+import { ThemeProvider } from "./components/theme-provider/ThemeContext"
 
 const App = () => {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/albums" element={<AlbumsPage />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <BrowserRouter>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Main>
+                  <Posts />
+                </Main>
+              }
+            />
+
+            <Route
+              path="/posts"
+              element={
+                <Main>
+                  <Posts />
+                </Main>
+              }
+            />
+
+            <Route
+              path="/albums"
+              element={
+                <Main>
+                  <Albums />
+                </Main>
+              }
+            />
+
+            <Route
+              path="/albums/:albumId"
+              element={
+                <Main>
+                  <Photos />
+                </Main>
+              }
+            />
+
+            <Route path="/sign-in" element={<SignIn />} />
+            <Route path="/registration" element={<Registration />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </ThemeProvider>
   )
 }
 

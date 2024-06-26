@@ -1,0 +1,21 @@
+.photosSection {
+  .title {
+    font-size: 24px;
+    padding: 10px;
+    color: var(--text-color);
+  }
+
+  .photosContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .photo {
+    border-radius: 10px;
+    margin-bottom: 5px;
+    width: 240px;
+    height: 240px;
+    border: 2px solid var(--text-color);
+  }
+}

@@ -1,0 +1,36 @@
+.comments {
+  margin-top: 10px;
+  .commentsButton {
+    cursor: pointer;
+    color: #248eff;
+    // text-decoration: underline;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  .profileAvatarImg {
+    box-sizing: border-box;
+    height: 100%;
+    width: 30px;
+    border-radius: 100%;
+  }
+  .comment {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: var(--bg-color-shadow);
+    .comment-email {
+      font-size: 0.9em;
+      margin-bottom: 5px;
+      color: var(--thirdColor);
+      display: flex;
+      align-items: center;
+      gap: 0.5vw;
+    }
+
+    .comment-body {
+      margin-top: 10px;
+      color: var(--text-color);
+    }
+  }
+}

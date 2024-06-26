@@ -6,10 +6,13 @@ const Menu = () => {
   return (
     <div className="menu">
       <Link className="menuButton" to={"/"}>
-        Posts
+        Посты
       </Link>
       <Link className="menuButton" to={"/albums"}>
-        Albums
+        Альбомы
+      </Link>
+      <Link className="menuButton" to={"/sign-in"}>
+        Выход
       </Link>
     </div>
   )

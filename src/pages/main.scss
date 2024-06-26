@@ -3,11 +3,16 @@
 .wrapper {
   justify-content: center;
   display: flex;
+  margin-top: 75px;
   .mainBlock {
     display: flex;
     @include container;
-    .menu {
-      margin-right: 0.25%;
+    gap: 0.25%;
+
+    .section {
+      display: flex;
+      width: clamp(500px, 100%, 1000px);
+      box-sizing: border-box;
     }
   }
 }

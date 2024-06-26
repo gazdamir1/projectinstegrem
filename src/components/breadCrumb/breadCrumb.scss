@@ -1,0 +1,19 @@
+.breadCrumbContainer {
+  padding-left: 10px;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-color);
+
+  .pathToPast {
+    text-decoration: none;
+    color: var(--text-color);
+    &:hover {
+      text-decoration: underline var(--text-color);
+    }
+  }
+  .arrowNext {
+    color: var(--text-color);
+  }
+}
